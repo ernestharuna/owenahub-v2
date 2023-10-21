@@ -9,7 +9,6 @@ async function fetchFeatured() {
 }
 
 export default async function FeaturedArticles() {
-    await new Promise((resolve) => setTimeout(resolve, 4000))
     const data = await fetchFeatured();
     return (
         <div className='animated-2 fadeIn'>

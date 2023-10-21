@@ -1,9 +1,9 @@
 import styles from "./page.module.scss"
 import Link from 'next/link'
-import ArticleCard from '@/components/cards/ArticleCard'
 import FeaturedArticles from "@/components/blocks/FeaturedArticles"
 import { Suspense } from "react"
 import GuestNavigation from "@/components/blocks/GuestNavigation"
+import Fallback from "@/components/cards/Fallback"
 
 export default function Home() {
   return (
@@ -12,12 +12,12 @@ export default function Home() {
         <section className="container text-center mt-5">
           <div>
             <h1 className='mb-4 fs-large'>
-              Connect, Learn and Thrive with <br />
+              Learn, Thrive and Connect with <br />
               <span className="theme-text-color">OwenaHub</span>.
             </h1>
             <p>
               We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
-              can seamlessly connect with experienced mentors
+              can seamlessly from experienced mentors
             </p>
 
             <div className="cta mt-4">
@@ -34,8 +34,8 @@ export default function Home() {
               </div>
             </div>
 
-            <span className='glow'></span>
-            <span className='glow-2'></span>
+            <span className={styles.glow}></span>
+            <span className={styles.glow_2}></span>
           </div>
         </section>
 
@@ -109,7 +109,7 @@ export default function Home() {
             </h3>
 
             <div className="text-start mx-auto">
-              <Suspense fallback={<div className='bg-light text-dark border p-3'>loading...</div>}>
+              <Suspense fallback={<Fallback />}>
                 <FeaturedArticles />
               </Suspense>
             </div>

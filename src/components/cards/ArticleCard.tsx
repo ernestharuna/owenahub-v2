@@ -11,7 +11,7 @@ dayjs.extend(relativeTime);
 export default function ArticleCard({ article }: ArticleCardProp) {
     return (
         <Link href={`/articles/${article.id}`} className='text-decoration-none'>
-            <div className="card bg-fff my-2 border border-none">
+            <div className="card bg-light my-2 border border-none">
                 <div className="card-body py-1">
                     <ArticleCategory category={article.category} /> - {" "}
                     <small className="text-uppercase text-secondary fs-tiny">{dayjs(article.createdAt).format('MMMM D, YYYY')}</small>

@@ -8,8 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Owenahub | The Learners Hub',
-  description: 'Connecting enthusiastic learners with profeessionals in tech',
+  title: 'Owenahub - Connecting enthusiastic learners with profeessionals in tech',
+  description: 'We provide a dynamic platform where passionate learners can seamlessly from experienced mentors',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

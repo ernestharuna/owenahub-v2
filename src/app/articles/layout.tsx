@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import GuestNavigation from '@/components/blocks/GuestNavigation';
-import Link from 'next/link';
+import RecommendedArticles from '@/components/blocks/RecommendedArticles';
+import Fallback from '@/components/cards/Fallback';
 
 export default function GuestArticleLayout({ children }: { children: React.ReactNode }) {
     return (
@@ -37,16 +38,9 @@ export default function GuestArticleLayout({ children }: { children: React.React
 
                         <div>
                             <h4 className='fw-bold'>Recommended Articles</h4>
-
-                            <p className="text-secondary">
-                                There are no mentors available at the moment
-                            </p>
-
-                            <Link href={"/articles"} className='text-decoration-none'>
-                                <button className="btn btn-dark rounded rounded-0 w-100 text-uppercase fs-6 fw-light shadow">
-                                    Back to articles
-                                </button>
-                            </Link>
+                            <Suspense fallback={<Fallback />}>
+                                <RecommendedArticles />
+                            </Suspense>
                         </div>
                     </aside>
                 </div>

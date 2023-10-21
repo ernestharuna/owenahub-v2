@@ -2,6 +2,12 @@ import ArticleCard from '@/components/cards/ArticleCard'
 import { Article } from '@/models/articles';
 import React from 'react'
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Latest Articles',
+    description: 'Read the latest articles curated by our mentors',
+}
 
 async function fetchArticles() {
     const response = await fetch('https://www.api.owenahub.com/api/guest/articles');

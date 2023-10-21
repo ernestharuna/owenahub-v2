@@ -51,17 +51,40 @@ export default function GuestNavigation({ children }: { children: React.ReactNod
                                 hello@owenahub.com <br />
                             </small>
                         </p>
-                        <span className="instagram">
-                            <i className="bi bi-instagram"></i>
-                        </span>
+
+                        <div>
+                            <div className="input-group mb-3">
+                                <input type="email" className="form-control" placeholder="Email Address" aria-label="Email Address" aria-describedby="button-addon2" />
+                                <button className="btn btn-outline-warning text-uppercase fw-bold fs-6" type="button" id="button-addon2">Subscribe</button>
+                            </div>
+                        </div>
+
+                        <a href="https://instagram.com/owenahub?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D" className='text-white'>
+                            <span className="instagram">
+                                <i className="bi bi-instagram"></i>
+                            </span>
+                        </a>
+
                         &nbsp;
-                        <span className="twitter">
-                            <i className="bi bi-twitter-x"></i>
-                        </span>
+                        <a href="https://x.com/owenahub?t=i4-Iz4K9RaKJ4vWP1QuLlA&s=08" className="text-white">
+                            <span className="twitter">
+                                <i className="bi bi-twitter-x"></i>
+                            </span>
+                        </a>
+
                         &nbsp;
-                        <span className="facebook">
-                            <i className="bi bi-facebook"></i>
-                        </span>
+                        <a href="https://www.facebook.com/owenahub?mibextid=ZbWKwL" className="text-white">
+                            <span className="facebook">
+                                <i className="bi bi-facebook"></i>
+                            </span>
+                        </a>
+                    </div>
+
+
+                    <div className="fs-6 my-4">
+                        <p className="m-0 fs-tiny">
+                            &copy; 2023, OwenaHub. All Rights Reserved.
+                        </p>
                     </div>
                 </div>
             </footer>
