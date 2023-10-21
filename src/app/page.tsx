@@ -1,95 +1,132 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import styles from "./page.module.scss"
+import Link from 'next/link'
+import ArticleCard from '@/components/cards/ArticleCard'
+import FeaturedArticles from "@/components/blocks/FeaturedArticles"
+import { Suspense } from "react"
+import GuestNavigation from "@/components/blocks/GuestNavigation"
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <GuestNavigation>
+      <div className='animated-2 fadeIn'>
+        <section className="container text-center mt-5">
+          <div>
+            <h1 className='mb-4 fs-large'>
+              Connect, Learn and Thrive with <br />
+              <span className="theme-text-color">OwenaHub</span>.
+            </h1>
+            <p>
+              We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
+              can seamlessly connect with experienced mentors
+            </p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <div className="cta mt-4">
+              <Link href={"/articles"} className='text-decoration-none'>
+                <button className="btn btn-dark rounded rounded-0 text-uppercase fs-6 fw-light shadow">
+                  See Articles <i className="bi bi-arrow-right"></i>
+                </button>
+              </Link>
+              <br />
+              <div className="mt-2">
+                <small className='fst-italic fs-tiny'>
+                  <i className="bi bi-stars text-primary"></i> 500+ weekly readers
+                </small>
+              </div>
+            </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+            <span className='glow'></span>
+            <span className='glow-2'></span>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <section className={styles.features}>
+          <div className="container">
+            <div className={`shadow shadow-0 ${styles.feature_box}`}>
+              <div>
+                <i className="bi bi-play-btn text-secondary"></i>
+                <div>
+                  <strong>Swift Sips</strong><br />
+                  <span>
+                    Get into our short courses; <br className='hidden' />
+                    compact and focused.
+                  </span>
+                </div>
+              </div>
+              <div>
+                <i className="bi bi-person-workspace text-secondary"></i>
+                <div>
+                  <strong>Expert Sessions</strong><br />
+                  <span>
+                    Connect With Skilled Mentors <br className="hidden" />
+                    That Inspire You.
+                  </span>
+                </div>
+              </div>
+              <div>
+                <i className="bi bi-journal-bookmark text-secondary"></i>
+                <div>
+                  <strong>Enriching Repository</strong><br />
+                  <span>
+                    Access a Wealth of Informative Articles<br className="hidden" />
+                    on Owena's Blogs
+                  </span>
+                </div>
+              </div>
+              <div>
+                <i className="bi bi-people text-secondary"></i>
+                <div>
+                  <strong>Private Session</strong><br />
+                  <span>
+                    Private Sessions tailored to <br className="hidden" />
+                    your individual needs and goals.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
+        <section className='quote container'>
+          <div className="text-center py-2">
+            <figure className="text-center text-dark m-0">
+              <blockquote className="blockquote">
+                <p className='fs-6'>
+                  <small>OwenaHub is resource rich for people wishing to pick up tips and tricks and gain perspective in their career path.</small>
+                </p>
+              </blockquote>
+              <figcaption className="blockquote-footer">
+                <span>Ernest Haruna, <i>founder</i></span>
+              </figcaption>
+            </figure>
+          </div>
+        </section >
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <section className='reasons-box mt-5 py-5 bg-f2'>
+          <div className="container">
+
+            <h3 className='fw-bold fs-4 mb-4'>
+              <span className="circle">5</span> FEATURED ARTICLES
+            </h3>
+
+            <div className="text-start mx-auto">
+              <Suspense fallback={<div className='bg-light text-dark border p-3'>loading...</div>}>
+                <FeaturedArticles />
+              </Suspense>
+            </div>
+
+          </div>
+        </section>
+
+        <section>
+          <div className='my-5 text-center'>
+            <Link href="/articles">
+              <button className="btn btn-dark text-white rounded rounded-0 text-uppercase fs-6 fw-light shadow" type='button'>
+                View More <i className="bi bi-arrow-right"></i>
+              </button>
+            </Link>
+          </div>
+        </section>
+      </div >
+    </GuestNavigation>
   )
 }
