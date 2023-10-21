@@ -8,8 +8,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Owenahub - Connecting enthusiastic learners with profeessionals in tech',
-  description: 'We provide a dynamic platform where passionate learners can seamlessly from experienced mentors',
+  generator: 'OwenaHub',
+  applicationName: 'OwenaHub',
+  title: 'Owenahub - We provide a dynamic platform where passionate learners can seamlessly learn from experienced mentors',
+  description: 'We provide a dynamic platform where passionate learners can seamlessly learn from experienced mentors',
+  colorScheme: 'dark',
+  keywords: ['learn', 'tech', 'code', 'mentor', 'career'],
+  creator: 'Ernest Haruna',
+  metadataBase: new URL('https://owenahub.com'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'en-US': '/en-US',
+      'en-UK': '/en-UK'
+    },
+  },
+  openGraph: {
+    images: '/og-image.png'
+  }
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -17,7 +17,7 @@ export default function Home() {
             </h1>
             <p>
               We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
-              can seamlessly from experienced mentors
+              can seamlessly learn from experienced mentors
             </p>
 
             <div className="cta mt-4">

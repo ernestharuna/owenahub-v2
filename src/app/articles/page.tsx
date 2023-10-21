@@ -5,7 +5,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Latest Articles',
+    title: 'Latest Articles - OwenaHub',
     description: 'Read the latest articles curated by our mentors',
 }
 

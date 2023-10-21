@@ -23,7 +23,7 @@ export async function generateMetadata(
     const previousImages = (await parent).openGraph?.images || []
 
     return {
-        title: article[0].title,
+        title: `${article[0].title} - owenahub`,
         openGraph: {
             images: ['/some-specific-page-image.jpg', ...previousImages],
         },
