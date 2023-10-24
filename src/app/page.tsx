@@ -16,14 +16,14 @@ export default function Home() {
               <span className="theme-text-color">OwenaHub</span>.
             </h1>
             <p>
-              We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
-              can seamlessly learn from experienced mentors
+              We offer a vibrant platform for learners <br className="d-md-inline-block d-none" />
+              to gain <em>career insights</em> from experienced mentors.
             </p>
 
             <div className="cta mt-4">
               <Link href={"/articles"} className='text-decoration-none'>
                 <button className="btn btn-dark rounded rounded-0 text-uppercase fs-6 fw-light shadow">
-                  See Articles <i className="bi bi-arrow-right"></i>
+                  Explore Articles <i className="bi bi-arrow-right"></i>
                 </button>
               </Link>
               <br />

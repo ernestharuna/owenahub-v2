@@ -10,7 +10,7 @@ async function fetchRecommendedArticles() {
 }
 
 export default async function RecommendedArticles() {
-    await new Promise((resolve) => setTimeout(resolve, 4000))
+    // await new Promise((resolve) => setTimeout(resolve, 4000))
     const data = await fetchRecommendedArticles();
 
     return (

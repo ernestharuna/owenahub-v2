@@ -2,16 +2,13 @@ import type { Metadata } from 'next'
 import './globals.scss'
 import './utility.scss'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { Inter } from 'next/font/google'
 // import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
-// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   generator: 'OwenaHub',
   applicationName: 'OwenaHub',
-  title: 'Owenahub - We provide a dynamic platform where passionate learners can seamlessly learn from experienced mentors',
-  description: 'We provide a dynamic platform where passionate learners can seamlessly learn from experienced mentors',
+  title: 'Owenahub - A vibrant platform for learners to gain career insights from experienced mentors.',
+  description: 'We offer a vibrant platform for learners to gain career insights from experienced mentors.',
   colorScheme: 'dark',
   keywords: ['learn', 'tech', 'code', 'mentor', 'career'],
   creator: 'Ernest Haruna',

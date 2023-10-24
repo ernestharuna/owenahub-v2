@@ -18,6 +18,7 @@ export default function GuestNavigation({ children }: { children: React.ReactNod
                     </div>
 
                     <div className='fs-tiny'>
+                        <Link href={"/about"} className='text-light text-decoration-none mx-4'>ABOUT</Link>
                         <Link href={"/articles"} className='text-light text-decoration-none'>BLOG</Link>
                     </div>
                 </nav>

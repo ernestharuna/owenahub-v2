@@ -28,13 +28,21 @@
 
 .circle {
     display: inline-block;
-    border: 3px solid #F6A700;
-    padding: .25rem 1rem;
+    // border: 3px solid #F6A700;
+    padding: .25rem .8rem;
+    color: #fff;
+    background: #BD34FE;
     border-radius: 9999px !important;
 }
 
 .w-64 {
     max-width: 64rem;
+    margin: 0 auto;
+}
+
+.w-34 {
+    max-width: 34rem !important;
+    margin: 0 auto;
 }
 
 .emp-text {
