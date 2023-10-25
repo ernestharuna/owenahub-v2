@@ -34,7 +34,7 @@ export default function GuestNavigation({ children }: { children: React.ReactNod
                     <div>
                         <h2 className='fs-5 fw-bold m-0'>
                             <Image src={logo} alt='logo' width={50} /> <br />
-                            OwenaHub<small className='fs-6 fst-italic fw-light'> — The Learner's Hub</small>
+                            OwenaHub<small className='fs-6 fst-italic fw-light'> — The Learner&apos;s Hub</small>
                         </h2>
                         <p>
                             <small>

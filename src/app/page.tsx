@@ -68,7 +68,7 @@ export default function Home() {
                   <strong>Enriching Repository</strong><br />
                   <span>
                     Access a Wealth of Informative Articles<br className="hidden" />
-                    on Owena's Blogs
+                    on Owena&apos;s Blogs
                   </span>
                 </div>
               </div>

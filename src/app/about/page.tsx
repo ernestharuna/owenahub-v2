@@ -13,8 +13,8 @@ export default function page() {
                         About Us
                     </h1>
                     <span className="fs-3 lh-1 fw-light">
-                        "We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
-                        can seamlessly learn from experienced mentors"
+                        We provide a dynamic platform where passionate learners <br className="d-md-inline-block d-none" />
+                        can seamlessly learn from experienced mentors
                     </span>
                 </div>
             </div>
@@ -22,7 +22,6 @@ export default function page() {
             <div className="container my-5 animated-2 fadeIn mx-auto text-center">
                 <div className="w-64">
                     <div className='my-5 shadow d-inline-block'>
-                        {/* <img src={image} alt="logo" className='img-fluid' /> */}
                         <Image src={image} alt='Owenahub' width={350} />
                     </div>
 
@@ -38,7 +37,7 @@ export default function page() {
 
                         <h3 className='fs-4 fw-medium mt-5'> Get access to helpful resources </h3>
                         <p>
-                            It's not impossible. What you need is proper mentorship,
+                            It&apos;s not impossible. What you need is proper mentorship,
                             <br />
                             and you will be unstopable.
                             <br />
