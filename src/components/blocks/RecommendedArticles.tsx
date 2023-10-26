@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import React, { Suspense } from 'react'
+import React from 'react'
 import MiniArticleCard from '../cards/MiniArticleCard';
 import { Article } from '@/models/articles';
+import { guestArticles } from '@/utils/article';
 
 async function fetchRecommendedArticles() {
-    const response = await fetch('https://www.api.owenahub.com/api/guest/articles');
-    const { data } = await response.json();
-    return data;
+    const articles = await guestArticles();
+    return articles;
 }
 
 export default async function RecommendedArticles() {

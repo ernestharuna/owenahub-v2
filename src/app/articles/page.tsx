@@ -3,6 +3,7 @@ import { Article } from '@/models/articles';
 import React from 'react'
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { guestArticles } from '@/utils/article';
 
 export const metadata: Metadata = {
     title: 'Latest Articles - OwenaHub',
@@ -10,9 +11,8 @@ export const metadata: Metadata = {
 }
 
 async function fetchArticles() {
-    const response = await fetch('https://www.api.owenahub.com/api/guest/articles');
-    const { data } = await response.json();
-    return data;
+    const articles = await guestArticles();
+    return articles;
 }
 
 export default async function Page() {

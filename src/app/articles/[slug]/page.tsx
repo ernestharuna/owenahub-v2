@@ -4,6 +4,7 @@ import relativeTime from 'dayjs/plugin/relativeTime';
 import styles from './page.module.scss';
 import ArticleCategory from '@/components/blocks/ArticleCategory';
 import { Metadata, ResolvingMetadata } from 'next';
+import { guestArticle, guestArticles } from '@/utils/article';
 
 dayjs.extend(relativeTime);
 
@@ -17,13 +18,11 @@ export async function generateMetadata(
     parent: ResolvingMetadata
 ): Promise<Metadata> {
     const id = params.slug
-    const article = await fetch(`https://api.owenahub.com/api/guest/articles/${id}`)
-        .then((res) => res.json())
-
+    const article = await guestArticle(id);
     const previousImages = (await parent).openGraph?.images || []
 
     return {
-        title: `${article[0].title} - owenahub`,
+        title: `${article[0].title} - OwenaHub`,
         openGraph: {
             images: ['/some-specific-page-image.jpg', ...previousImages],
         },
@@ -31,15 +30,12 @@ export async function generateMetadata(
 }
 
 async function fetchArticle(id: number) {
-    const response = await fetch(`https://api.owenahub.com/api/guest/articles/${id}`);
-    const data = await response.json();
-    return data;
+    const article = await guestArticle(id);
+    return article;
 }
 
 export async function generateStaticParams() {
-    const articles = await fetch('https://www.api.owenahub.com/api/guest/articles')
-    const { data } = await articles.json();
-
+    const data = await guestArticles();
     return data.map((post: any) => ({
         slug: post.slug,
     }))
